@@ -1,0 +1,1 @@
+from apps.movies.services.catalog.main import search_in_index,director_index, stars_index, load

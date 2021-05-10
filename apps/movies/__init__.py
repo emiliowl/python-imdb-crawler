@@ -1,0 +1,1 @@
+from apps.movies.lookup_blueprint import bp as lookup_blueprint, init as init_lookup_blueprint
