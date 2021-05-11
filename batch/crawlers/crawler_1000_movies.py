@@ -1,4 +1,7 @@
+import os
 import requests
+
+DATA_FOLDER = 'data/details'
 
 initial_index = 1
 base_url = 'https://www.imdb.com'
@@ -48,7 +51,13 @@ def write_data_to_disk(filename, data):
         f.write(data)
 
 
+def create_data_dir():
+    os.makedirs(DATA_FOLDER, exist_ok=True)   
+
+
 if __name__ == '__main__':
+    create_data_dir()
+
     cur_cursor_val = 1
     cur_page = 1
     url = build_url()
